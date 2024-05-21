@@ -1,4 +1,4 @@
-package testDummyAPI.sprint2;
+package vn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

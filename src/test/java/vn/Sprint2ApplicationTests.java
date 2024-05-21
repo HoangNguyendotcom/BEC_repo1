@@ -1,4 +1,4 @@
-package testDummyAPI.sprint2;
+package vn;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

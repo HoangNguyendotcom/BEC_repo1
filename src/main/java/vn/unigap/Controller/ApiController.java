@@ -1,7 +1,7 @@
-package testDummyAPI.sprint2.Controller;
+package vn.unigap.Controller;
 import org.springframework.web.bind.annotation.*;
-import testDummyAPI.sprint2.Model.Employee;
-import testDummyAPI.sprint2.Service.EmployeeService;
+import vn.unigap.Model.Employee;
+import vn.unigap.Service.EmployeeService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

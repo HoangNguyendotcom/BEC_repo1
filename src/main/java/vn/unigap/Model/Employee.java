@@ -1,4 +1,4 @@
-package testDummyAPI.sprint2.Model;
+package vn.unigap.Model;
 
 public class Employee {
     private int id;

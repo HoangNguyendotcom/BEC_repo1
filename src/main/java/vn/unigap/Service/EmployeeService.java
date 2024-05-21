@@ -1,5 +1,5 @@
-package testDummyAPI.sprint2.Service;
-import testDummyAPI.sprint2.Model.Employee;
+package vn.unigap.Service;
+import vn.unigap.Model.Employee;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
