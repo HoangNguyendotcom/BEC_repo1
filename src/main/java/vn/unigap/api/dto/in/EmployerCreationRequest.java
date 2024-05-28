@@ -12,7 +12,7 @@ public class EmployerCreationRequest {
     private String email;
     @Size(max = 255, message = "The maximum number of characters is 255 characters ")
     private String name;
-    private int province;
+    private int provinceId;
     private String description;
     private LocalDate created_at;
     private LocalDate updated_at;
@@ -33,12 +33,12 @@ public class EmployerCreationRequest {
         this.name = name;
     }
 
-    public int getProvince() {
-        return province;
+    public int getProvinceId() {
+        return provinceId;
     }
 
-    public void setProvince(int province) {
-        this.province = province;
+    public void setProvince(int provinceId) {
+        this.provinceId = provinceId;
     }
 
     public String getDescription() {

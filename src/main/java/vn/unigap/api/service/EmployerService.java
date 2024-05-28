@@ -33,7 +33,7 @@ public class EmployerService {
 
         employer.setEmail(request.getEmail());
         employer.setName(request.getName());
-        employer.setProvince(request.getProvince());
+        employer.setProvinceId(request.getProvinceId());
         employer.setDescription(request.getDescription());
         employer.setCreated_at(LocalDate.now());
         return employerRepository.save(employer);
@@ -41,12 +41,10 @@ public class EmployerService {
     public Employer updateEmployer(long employerId, EmployerUpdateRequest request) {
         Employer employer = getEmployer(employerId);
 
-        employer.setEmail(request.getEmail());
         employer.setName(request.getName());
-        employer.setProvince(request.getProvince());
+        employer.setProvinceId(request.getProvinceId());
         employer.setDescription(request.getDescription() != null ? request.getDescription() : employer.getDescription());
         employer.setUpdated_at(LocalDate.now());
-        employer.setCreated_at(employer.getCreated_at());
 
         return employerRepository.save(employer);
     }

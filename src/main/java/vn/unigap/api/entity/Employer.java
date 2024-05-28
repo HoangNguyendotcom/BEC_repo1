@@ -1,20 +1,18 @@
 package vn.unigap.api.entity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 @Entity
 public class Employer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @SequenceGenerator(name = "my_sequence", sequenceName = "my_sequence", initialValue = 3094562)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "my_sequence")
+    @Column(name = "id")
     private long id;
     @Column(unique = true)
     private String email;
     private String name;
-    private int province;
+    private int provinceId;
     private String description;
     private LocalDate created_at;
     private LocalDate updated_at;
@@ -43,12 +41,12 @@ public class Employer {
         this.name = name;
     }
 
-    public int getProvince() {
-        return province;
+    public int getProvinceId() {
+        return provinceId;
     }
 
-    public void setProvince(int province) {
-        this.province = province;
+    public void setProvinceId(int provinceId) {
+        this.provinceId = provinceId;
     }
 
     public String getDescription() {
