@@ -9,6 +9,7 @@ import java.time.LocalDate;
 @Entity
 public class Employer {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column(unique = true)
     private String email;
