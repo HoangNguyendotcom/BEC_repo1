@@ -1,6 +1,7 @@
 package vn.unigap.api.dto.in;
 
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
@@ -8,10 +9,13 @@ import java.time.LocalDate;
 
 public class EmployerCreationRequest {
     @Email(message = "Email should be valid")
+    @NotNull(message = "Please provide the email")
     @Size(max = 255, message = "The maximum number of characters is 255 characters ")
     private String email;
     @Size(max = 255, message = "The maximum number of characters is 255 characters ")
+    @NotNull(message = "Please provide the company name")
     private String name;
+    @NotNull(message = "Please provide the provinceId")
     private int provinceId;
     private String description;
     private LocalDate created_at;

@@ -7,6 +7,7 @@ import vn.unigap.api.dto.in.EmployerCreationRequest;
 import vn.unigap.api.dto.in.EmployerUpdateRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import vn.unigap.api.exception.GlobalExceptionHandler;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -16,7 +17,7 @@ public class EmployerService {
     @Autowired
     private EmployerRepository employerRepository;
 
-    public List<Employer> getEmployers() {
+    public List<Employer> getAllEmployers() {
 
         return employerRepository.findAll();
     }
@@ -36,6 +37,7 @@ public class EmployerService {
         employer.setProvinceId(request.getProvinceId());
         employer.setDescription(request.getDescription());
         employer.setCreated_at(LocalDate.now());
+        employer.setUpdated_at(LocalDate.now());
         return employerRepository.save(employer);
     }
     public Employer updateEmployer(long employerId, EmployerUpdateRequest request) {
