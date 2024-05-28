@@ -12,7 +12,7 @@ public class Employer {
     @Column(unique = true)
     private String email;
     private String name;
-    private int province;
+    private int provinceId;
     private String description;
     private LocalDate created_at;
     private LocalDate updated_at;
@@ -41,12 +41,12 @@ public class Employer {
         this.name = name;
     }
 
-    public int getProvince() {
-        return province;
+    public int getProvinceId() {
+        return provinceId;
     }
 
-    public void setProvince(int province) {
-        this.province = province;
+    public void setProvinceId(int provinceId) {
+        this.provinceId = provinceId;
     }
 
     public String getDescription() {

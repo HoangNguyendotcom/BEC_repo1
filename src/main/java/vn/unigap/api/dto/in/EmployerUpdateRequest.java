@@ -1,14 +1,29 @@
 package vn.unigap.api.dto.in;
 
+import jakarta.validation.constraints.NotNull;
+
 import java.time.LocalDate;
 
 public class EmployerUpdateRequest {
+    @NotNull(message = "Please provide the Id")
+    private long id;
     private String email;
+    @NotNull(message = "Please provide the company name")
     private String name;
-    private int province;
+    @NotNull(message = "Please provide the provinceId")
+    private int provinceId;
     private String description;
     private LocalDate created_at;
     private LocalDate updated_at;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -24,12 +39,12 @@ public class EmployerUpdateRequest {
         this.name = name;
     }
 
-    public int getProvince() {
-        return province;
+    public int getProvinceId() {
+        return provinceId;
     }
 
-    public void setProvince(int province) {
-        this.province = province;
+    public void setProvinceId(int provinceId) {
+        this.provinceId = provinceId;
     }
 
     public String getDescription() {
