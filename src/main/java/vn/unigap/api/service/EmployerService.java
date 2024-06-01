@@ -1,13 +1,11 @@
 package vn.unigap.api.service;
 
-import jakarta.persistence.Id;
 import vn.unigap.api.entity.Employer;
 import vn.unigap.api.repository.EmployerRepository;
 import vn.unigap.api.dto.in.EmployerCreationRequest;
 import vn.unigap.api.dto.in.EmployerUpdateRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import vn.unigap.api.exception.GlobalExceptionHandler;
 
 import java.time.LocalDate;
 import java.util.List;
